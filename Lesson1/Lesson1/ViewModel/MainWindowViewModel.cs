@@ -67,7 +67,7 @@ namespace Lesson1.ViewModel
 
         private void OnCreateNewRecepientCommandExecute()
         {
-            var new_recepient = new Recepients();
+            var new_recepient = new Recepients() { Name = "Recipient", Email="recipient@address.com"};
             var id = _RecepientsData.Create(new_recepient);
             if(id != null)
             {
