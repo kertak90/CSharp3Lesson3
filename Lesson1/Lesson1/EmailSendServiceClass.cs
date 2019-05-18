@@ -18,7 +18,7 @@ namespace Lesson1
                 message.From = new MailAddress("kertak@yandex.ru");
                 message.To.Add(new MailAddress("dimegrv@yandex.ru"));
 
-                message.Subject = "Пушкин я помню чудное мгновенье!!! =) =) =) =)";
+                message.Subject = "Пушкин я помню чудное мгновенье!!! =) =) =)";
                 message.Body = "123";
                 message.IsBodyHtml = false;
                 for (int i = 0; i < 10; i++)
