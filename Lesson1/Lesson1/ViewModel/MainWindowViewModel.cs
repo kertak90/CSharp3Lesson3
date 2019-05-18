@@ -1,5 +1,5 @@
 ﻿using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.CommandWpf;
 using MailSenderLib.Linq2SQL;
 using MailSenderLib.Services.Interfaces;
 using System;
@@ -67,14 +67,13 @@ namespace Lesson1.ViewModel
 
         private void OnCreateNewRecepientCommandExecute()
         {
-            var new_recepient = new Recepients();
+            var new_recepient = new Recepients {Name = "Recepient", Email = "recipient@address.com"};
             var id = _RecepientsData.Create(new_recepient);
-            if(id != null)
-            {
-                Recipients.Add(new_recepient);
-                SelectedRecepient = new_recepient;
-            }
-
+            if (id == 0) return;
+            
+            Recipients.Add(new_recepient);
+            SelectedRecepient = new_recepient;
+            
         }
 
         private bool CanWriteRecipientDataCommandExecute(Recepients recipient) => recipient != null;

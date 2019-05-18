@@ -20,6 +20,7 @@ namespace MailSenderLib.Services
         {
             if (recepients.Id != 0) return recepients.Id;
             _db.Recepients.InsertOnSubmit(recepients);
+            SaveChanges();
             return recepients.Id;
         }
 

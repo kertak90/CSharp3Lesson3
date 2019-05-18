@@ -33,7 +33,7 @@
                 Content="Сохранить изменения"/>
             <Button Margin="0,10,0,0"
                 Padding="20, 5"
-                Command="{Binding WriteRecipientDataCommand}"
+                Command="{Binding CreateNewRecepientCommand}"
                 CommandParameter="{Binding SelectedRecepient}"
                 Content="Создать"/>
         </UniformGrid>
